@@ -21,7 +21,3 @@ spring:
 server:
   servlet:
     context-path: /map
-
-
-
-
