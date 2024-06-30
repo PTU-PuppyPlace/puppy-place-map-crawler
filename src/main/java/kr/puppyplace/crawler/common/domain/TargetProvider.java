@@ -1,4 +1,4 @@
-package kr.puppyplace.crawler.crawl.domain;
+package kr.puppyplace.crawler.common.domain;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

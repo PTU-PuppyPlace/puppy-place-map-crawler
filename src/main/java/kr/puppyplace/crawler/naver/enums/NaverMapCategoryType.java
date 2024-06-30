@@ -1,4 +1,4 @@
-package kr.puppyplace.crawler.crawl.enums;
+package kr.puppyplace.crawler.naver.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

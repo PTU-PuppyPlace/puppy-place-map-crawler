@@ -1,4 +1,4 @@
-package kr.puppyplace.crawler.crawl.converter;
+package kr.puppyplace.crawler.naver.converter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 import java.util.List;
-import kr.puppyplace.crawler.crawl.dto.NaverMapDataOpenSchedule;
+import kr.puppyplace.crawler.naver.dto.NaverMapDataOpenSchedule;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

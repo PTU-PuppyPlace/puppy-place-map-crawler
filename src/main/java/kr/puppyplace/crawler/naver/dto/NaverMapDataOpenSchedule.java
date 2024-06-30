@@ -1,4 +1,4 @@
-package kr.puppyplace.crawler.crawl.dto;
+package kr.puppyplace.crawler.naver.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.DayOfWeek;

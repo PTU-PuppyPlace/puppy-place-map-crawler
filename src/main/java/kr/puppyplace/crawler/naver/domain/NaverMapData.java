@@ -1,4 +1,4 @@
-package kr.puppyplace.crawler.crawl.domain;
+package kr.puppyplace.crawler.naver.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
@@ -11,9 +11,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import java.util.List;
-import kr.puppyplace.crawler.crawl.converter.NaverMapDataOpenScheduleConverter;
-import kr.puppyplace.crawler.crawl.dto.NaverMapDataOpenSchedule;
-import kr.puppyplace.crawler.crawl.enums.NaverMapCategoryType;
+import kr.puppyplace.crawler.naver.converter.NaverMapDataOpenScheduleConverter;
+import kr.puppyplace.crawler.naver.dto.NaverMapDataOpenSchedule;
+import kr.puppyplace.crawler.naver.enums.NaverMapCategoryType;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
