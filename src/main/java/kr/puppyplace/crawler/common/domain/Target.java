@@ -2,9 +2,12 @@ package kr.puppyplace.crawler.common.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import lombok.AccessLevel;
@@ -43,6 +46,12 @@ public class Target extends BaseEntity {
     @Column(name = "IS_ACTIVE")
     @Comment("활성 여부")
     private Boolean isActive = true;
+
+    @NotNull
+    @Comment("사이트의 제공자명")
+    @JoinColumn(name = "TARGET_PROVIDER_ID")
+    @ManyToOne(fetch = FetchType.LAZY)
+    private TargetProvider targetProvider;
 
     public void updateIsActive(Boolean isActive) {
         this.isActive = isActive;
