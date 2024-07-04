@@ -29,9 +29,9 @@ model NaverMapData {
   latitude  Float
   longitude Float
   phone     String
-  schedule  String
+  schedule  String?
   category  NaverMapCategoryType
-  info      String
+  info      String?
   createdAt DateTime             @default(now())
   updatedAt DateTime             @updatedAt
 }
