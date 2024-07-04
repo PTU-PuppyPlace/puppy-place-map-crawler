@@ -30,6 +30,7 @@ model NaverMapData {
   longitude Float
   phone     String
   category  NaverMapCategoryType
+  info      String
   createdAt DateTime             @default(now())
   updatedAt DateTime             @updatedAt
 }
