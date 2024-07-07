@@ -28,10 +28,11 @@ model NaverMapData {
   address   String
   latitude  Float
   longitude Float
-  phone     String
-  schedule  String?
+  phone     String?
+  schedule  String?             @db.Text
   category  NaverMapCategoryType
-  info      String?
+  information String?           @db.Text
+  etc       String?
   createdAt DateTime             @default(now())
   updatedAt DateTime             @updatedAt
 }
