@@ -92,6 +92,7 @@ export class NaverService {
                 dto.latitude = naverBookMarkData.latitude;
                 dto.longitude = naverBookMarkData.longitude;
                 dto.title = naverBookMarkData.name;
+                dto.sid = naverBookMarkData.sid;
 
                 await this.naverRepository.create(dto);
                 console.log('[크롤링] 크롤링 작업이 완료되었습니다. URL : ' + page.url());

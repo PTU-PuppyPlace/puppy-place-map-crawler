@@ -24,6 +24,7 @@ model Target {
 
 model NaverMapData {
   id        Int                  @id @default(autoincrement())
+  sid       String               @unique
   title     String
   address   String
   latitude  Float

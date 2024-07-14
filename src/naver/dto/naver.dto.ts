@@ -15,6 +15,10 @@ export const NaverMapCategoryType: ReadOnlyRecord<MapType, MapType> = {
 export class CreateNaverDto {
     @IsString()
     @IsNotEmpty()
+    sid: string
+
+    @IsString()
+    @IsNotEmpty()
     title: string;
 
     @IsString()
