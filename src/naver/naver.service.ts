@@ -48,6 +48,7 @@ export class NaverService {
                 await page.goto(NAVER_PLACE_URL + naverBookMarkData.sid);
                 console.info("[크롤링 시작] 크롤링 작업을 시작합니다. URL : " + page.url());
                 try {
+                    await this.naverRepository.deleteBySid(naverBookMarkData.sid);
                     await page.waitForSelector(BODY_SELECTOR, {timeout: 5000});
                     await page.click(SCHEDULE_BUTTON_SELECTOR);
                     

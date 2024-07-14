@@ -15,4 +15,12 @@ export class NaverRepository {
     async findAll() {
         return this.prisma.naverMapData.findMany();
     }
+
+    async deleteBySid(sid: string) {
+        return this.prisma.naverMapData.delete({
+            where: {
+                sid: sid,
+            },
+        });
+    }
 }
