@@ -1,22 +1,22 @@
-import { Injectable } from "@nestjs/common";
-import { PrismaService } from "src/prisma/prisma.service";
-import { CreateNaverDto } from "./dto/naver.dto";
+import { Injectable } from '@nestjs/common';
+import { PrismaService } from 'src/prisma/prisma.service';
+import { CreateNaverDto } from './dto/naver.dto';
 
 @Injectable()
 export class NaverRepository {
-    constructor(private prisma: PrismaService) {}
+  constructor(private prisma: PrismaService) {}
 
-    async create(createNaverDto: CreateNaverDto) {
-        await this.prisma.naverMapData.create({
-            data: createNaverDto,
-        });
-    }
+  async create(createNaverDto: CreateNaverDto) {
+    await this.prisma.naverMapData.create({
+      data: createNaverDto,
+    });
+  }
 
-    async deleteBySid(sid: string) {
-        return this.prisma.naverMapData.delete({
-            where: {
-                sid: sid,
-            },
-        });
-    }
+  async deleteBySid(sid: string) {
+    return this.prisma.naverMapData.delete({
+      where: {
+        sid: sid,
+      },
+    });
+  }
 }

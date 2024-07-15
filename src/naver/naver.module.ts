@@ -6,10 +6,14 @@ import { HttpModule } from '@nestjs/axios';
 import { TargetModule } from 'src/target/target.module';
 
 @Module({
-    imports: [PrismaModule, TargetModule, HttpModule.register({
-        timeout: 5000,
-        maxRedirects: 5,
-    })],
-    providers: [NaverService, NaverRepository],    
+  imports: [
+    PrismaModule,
+    TargetModule,
+    HttpModule.register({
+      timeout: 5000,
+      maxRedirects: 5,
+    }),
+  ],
+  providers: [NaverService, NaverRepository],
 })
 export class NaverModule {}
