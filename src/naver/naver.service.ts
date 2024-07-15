@@ -9,6 +9,7 @@ import * as puppeteer from 'puppeteer';
 import * as cheerio from 'cheerio';
 import { CreateNaverDto } from './dto/naver.dto';
 import { NaverBookmarkData } from './interface/naver.interface';
+import { Cron } from '@nestjs/schedule';
 
 let NAVER_PLACE_URL: string = "https://pcmap.place.naver.com/place/";
 
@@ -30,6 +31,8 @@ export class NaverService {
         private readonly targetRepository: TargetRepository,
         private readonly httpService: HttpService) {}
     
+    // 매주 월요일 00시에 실행
+    @Cron('0 0 * * 1')
     async getNaverMapData(): Promise<void>{
         const browser: puppeteer.Browser = await puppeteer.launch();
         const page: puppeteer.Page = await browser.newPage();
