@@ -1,4 +1,4 @@
-import { IsEnum, IsNotEmpty, IsNumber, IsString } from "class-validator";
+import { IsBoolean, IsEnum, IsNotEmpty, IsNumber, IsString } from "class-validator";
 
 type ReadOnlyRecord<K extends string, V> = Readonly<Record<K, V>>;
 
@@ -49,4 +49,8 @@ export class CreateNaverDto {
     @IsNotEmpty()
     @IsEnum(NaverMapCategoryType)
     category: MapType;
+
+    @IsBoolean()
+    @IsNotEmpty()
+    available: boolean;
 }
