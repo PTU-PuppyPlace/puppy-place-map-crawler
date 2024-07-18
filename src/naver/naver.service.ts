@@ -132,6 +132,7 @@ export class NaverService {
       }
     }
     await page.close();
+    await browser.close();
   }
 
   private async getNaverBookMarkData(
