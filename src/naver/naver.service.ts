@@ -66,10 +66,10 @@ export class NaverService {
             );
           }
           await page.waitForSelector(BODY_SELECTOR, { timeout: 5000 });
-          const html: string = await page.content();
-          const $ = cheerio.load(html);
           try {
             await page.click(SCHEDULE_BUTTON_SELECTOR);
+            const html: string = await page.content();
+            const $ = cheerio.load(html);
             $(SCHEDULE_LIST_SELECTOR).each((index, scheduleElement) => {
               if (index === 0) {
                 return;
@@ -99,6 +99,8 @@ export class NaverService {
             console.error(e);
             console.log('[크롤링] 시간 정보가 없습니다. URL : ' + page.url());
           }
+          const html: string = await page.content();
+          const $ = cheerio.load(html);
           dto.etc = $(ETC_SELECTOR).text();
           dto.phone = $(PHONE_SELECTOR).text();
         } catch (e) {
